@@ -86,7 +86,20 @@ Checklist trước khi khóa nhãn:
 
 ## 4. Chấm nhãn với ground truth
 
-Giảng viên phát thư mục nhãn chuẩn (ground truth) `gold_train_labels/` sau khi cả lớp nộp/khóa nhãn. Chép thư mục này cùng cấp với `dataset/`, rồi chạy:
+Nếu bạn đã có thư mục nhãn chuẩn (ground truth) `gold_train_labels/`, đặt thư mục này ở thư mục gốc repo, cùng cấp với `dataset/` và `tools/`. Bên trong, đặt trực tiếp các file `.txt` (không cần thư mục con); tên file phải trùng basename ảnh, ví dụ `drive_001.txt` tương ứng với `drive_001.jpg`:
+
+```text
+repo/
+├── dataset/
+│   └── labels/train/drive_001.txt    # nhãn của bạn
+├── gold_train_labels/
+│   ├── drive_001.txt                 # nhãn chuẩn
+│   ├── drive_002.txt
+│   └── ...
+└── tools/evaluate_annotations.py
+```
+
+Các file nhãn chuẩn dùng định dạng YOLO giống nhãn của bạn: mỗi dòng có năm giá trị `<class_id> <x_center> <y_center> <width> <height>`; ảnh không có đối tượng thuộc schema có file `.txt` rỗng. Sau đó chạy:
 
 ```bash
 python3 tools/evaluate_annotations.py \
