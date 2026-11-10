@@ -22,6 +22,6 @@
 
 | Ảnh | Tình huống | Quyết định cuối | Lý do theo schema |
 | --- | --- | --- | --- |
-| `drive_...` | Xe con bị che một phần, nhưng vẫn thấy rõ thân xe | `car` | Phần nhìn thấy đủ nhận diện xe chở người thông thường; box chỉ bao phần xe nhìn thấy. |
-| `drive_...` | Xe bị cắt ở mép ảnh, vẫn nhận ra thùng hàng riêng biệt | `truck` | Cấu tạo thùng/sàn hàng phù hợp định nghĩa `truck`; box dừng tại rìa ảnh, không suy đoán phần ngoài khung. |
-| `drive_...` | Xe thân cao, khó phân biệt `van` với `bus` do ảnh nhỏ hoặc bị khuất | Bỏ qua nếu không đủ dấu hiệu phân loại; nếu rõ xe cỡ nhỏ/trung bình thì chọn `van`, nếu rõ xe chở nhiều hành khách cỡ lớn thì chọn `bus` | Quyết định dựa vào kích thước và cấu tạo khoang theo schema; không dựa riêng vào màu sắc. |
+| `drive_001` | Xe con bị che một phần, nhưng vẫn thấy rõ thân xe | `car` | Phần nhìn thấy đủ nhận diện xe chở người thông thường; box chỉ bao phần xe nhìn thấy. |
+| `drive_005` | Xe bị cắt ở mép ảnh, vẫn nhận ra thùng hàng riêng biệt | `car` | Cấu tạo đuôi xe thấp |
+| `drive_012` | không phân biệt đc `van` với `cả` do ảnh nhỏ hoặc bị khuất | Bỏ qua | Quyết định dựa vào kích thước và cấu tạo khoang theo schema; không dựa riêng vào màu sắc. |
