@@ -13,15 +13,15 @@
 
 ## Quy tắc chung
 
-- Box bám sát vật thể nghĩa là: ...
-- Vật thể bị che khuất: ...
-- Vật thể bị cắt bởi rìa ảnh: ...
-- Vật thể rất nhỏ/mơ hồ: ...
+- Box bám sát vật thể nghĩa là: bao sát toàn bộ phần xe nhìn thấy, gồm các bộ phận thuộc xe; tránh lấy quá nhiều nền và không suy đoán phần khuất.
+- Vật thể bị che khuất: gán nhãn nếu phần nhìn thấy đủ để nhận diện chắc chắn lớp; vẽ box quanh phần nhìn thấy, không bao gồm vật che khuất.
+- Vật thể bị cắt bởi rìa ảnh: vẽ box đến đúng rìa ảnh và chỉ bao phần nằm trong ảnh; không ước lượng phần nằm ngoài khung.
+- Vật thể rất nhỏ/mơ hồ: chỉ gán nhãn khi có đủ dấu hiệu nhận diện lớp; nếu không thể phân biệt chắc chắn giữa các lớp thì bỏ qua và ghi chú để self-QC, không đoán.
 
 ## Ghi lại quyết định cho ít nhất ba ca mơ hồ
 
 | Ảnh | Tình huống | Quyết định cuối | Lý do theo schema |
 | --- | --- | --- | --- |
-| `drive_...` | | | |
-| `drive_...` | | | |
-| `drive_...` | | | |
+| `drive_...` | Xe con bị che một phần, nhưng vẫn thấy rõ thân xe | `car` | Phần nhìn thấy đủ nhận diện xe chở người thông thường; box chỉ bao phần xe nhìn thấy. |
+| `drive_...` | Xe bị cắt ở mép ảnh, vẫn nhận ra thùng hàng riêng biệt | `truck` | Cấu tạo thùng/sàn hàng phù hợp định nghĩa `truck`; box dừng tại rìa ảnh, không suy đoán phần ngoài khung. |
+| `drive_...` | Xe thân cao, khó phân biệt `van` với `bus` do ảnh nhỏ hoặc bị khuất | Bỏ qua nếu không đủ dấu hiệu phân loại; nếu rõ xe cỡ nhỏ/trung bình thì chọn `van`, nếu rõ xe chở nhiều hành khách cỡ lớn thì chọn `bus` | Quyết định dựa vào kích thước và cấu tạo khoang theo schema; không dựa riêng vào màu sắc. |
