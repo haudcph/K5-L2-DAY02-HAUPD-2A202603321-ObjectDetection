@@ -66,7 +66,7 @@ Trả lời bốn câu hỏi cuối notebook:
 
 | Bước/thời điểm | Lỗi quan sát | Cách đã thử | Kết quả/còn thiếu |
 |---|---|---|---|
-| | | | |
+| Gold QC và đối chiếu dự đoán | Gold QC chưa đạt (`passed: false`); các chỉ số FP/FN chưa đủ để xác định nguyên nhân. Khi rà soát, phát hiện nhãn truck, van và bus trong dữ liệu tham chiếu có trường hợp không khớp ảnh. | Đối chiếu ảnh gốc, box/class dự đoán, nhãn tham chiếu và quy tắc trong guideline; không sửa nhãn chỉ để tăng điểm. | Ghi nhận trường hợp nghi nhãn sai; cần xác minh từng ảnh, sửa nếu ảnh và schema xác nhận, rồi chạy checker và Gold QC lại. |
 
 ## 7. Tự đánh giá theo rubric
 
