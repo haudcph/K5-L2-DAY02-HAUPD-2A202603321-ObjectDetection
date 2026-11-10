@@ -24,4 +24,4 @@
 | --- | --- | --- | --- |
 | `drive_001` | Xe con bị che một phần, nhưng vẫn thấy rõ thân xe | `car` | Phần nhìn thấy đủ nhận diện xe chở người thông thường; box chỉ bao phần xe nhìn thấy. |
 | `drive_005` | Xe bị cắt ở mép ảnh, vẫn nhận ra thùng hàng riêng biệt | `car` | Cấu tạo đuôi xe thấp |
-| `drive_012` | không phân biệt đc `van` với `cả` do ảnh nhỏ hoặc bị khuất | Bỏ qua | Quyết định dựa vào kích thước và cấu tạo khoang theo schema; không dựa riêng vào màu sắc. |
+| `drive_012` | không phân biệt đc `van` với `car` do ảnh nhỏ hoặc bị khuất | Bỏ qua | Quyết định dựa vào kích thước và cấu tạo khoang theo schema; không dựa riêng vào màu sắc. |

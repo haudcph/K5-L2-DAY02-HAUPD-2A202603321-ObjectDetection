@@ -7,7 +7,7 @@
 - Họ tên: PHẠM ĐỨC HẬU
 - MSSV: 2A202603321
 - Email: 26ai.haupd@vinuni.edu.vn
-- Lớp: 
+- Lớp: LAB E403
 - Link repo bài làm: https://github.com/haudcph/K5-L2-DAY02-HAUPD-2A202603321-ObjectDetection
 - Link Colab đã chạy:https://colab.research.google.com/drive/1cmrvfM53jp7tCBaJUTuoln5_Qg0gd6jW?usp=sharing
 
@@ -25,18 +25,18 @@ Dẫn tới [GUIDELINE_MINI.md](../../GUIDELINE_MINI.md). Tóm tắt ba ca mơ h
 
 ## 4. Gold QC và rework
 
-| Chỉ số | Trước sửa | Sau sửa nếu có |
+| Chỉ số | Lần đầu (log ban đầu) | Hiện tại (chạy lại) |
 |---|---:|---:|
-| TP | 568 | |
-| FP | 450 | |
-| FN | 85 | |
-| Precision | 0.558 | |
-| Recall | 0.8698 | |
-| F1 | 0.6798 | |
-| mean_iou_of_matches | 0.8196 | |
-| passed | false | |
+| TP | 18 | 568 |
+| FP | 995 | 450 |
+| FN | 635 | 85 |
+| Precision | 0.0178 | 0.5580 |
+| Recall | 0.0276 | 0.8698 |
+| F1 | 0.0216 | 0.6798 |
+| mean_iou_of_matches | 0.8105 | 0.8196 |
+| passed | false | false |
 
-Dẫn tới `outputs/annotation_evaluation.json` trong repo. Nếu rework, ghi ảnh, lỗi đã kiểm, quyết định sửa/giữ và lý do. Không suy nguyên nhân chỉ từ FP/FN. Không có rework thì ghi rõ.
+Dẫn tới `outputs/annotation_evaluation.json` trong repo. Cột “Lần đầu” lấy từ log đánh giá ban đầu; cột “Hiện tại” là kết quả chạy lại trên nhãn hiện có. Kết quả hiện tại vẫn chưa đạt ngưỡng F1 0.80. Nếu rework, ghi ảnh, lỗi đã kiểm, quyết định sửa/giữ và lý do; không suy nguyên nhân chỉ từ FP/FN.
 
 ## 5. Kết quả YOLO
 
